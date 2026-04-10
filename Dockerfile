@@ -17,7 +17,7 @@ LABEL org.label-schema.version=$VERSION
 LABEL org.label-schema.docker.cmd="docker run -v ./config:/jmb/config -d thoevers/jmusicbot"
 
 RUN apk add --update --no-cache \
-    openjdk11-jre-headless tini
+    openjdk17-jre-headless tini
 
 #No downloadable example config since 0.2.10
 RUN mkdir -p /jmb/config
