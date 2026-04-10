@@ -10,7 +10,7 @@ LABEL org.label-schema.schema-version="1.0"
 LABEL org.label-schema.build-date=$BUILD_DATE
 LABEL org.label-schema.name="craumix/jmusicbot"
 LABEL org.label-schema.description="Java based Discord music bot"
-LABEL org.label-schema.url="https://github.com/SeVile/MusicBot"
+LABEL org.label-schema.url="https://github.com/noxianwill/MusicBot"
 LABEL org.label-schema.vcs-url="https://github.com/Snailpower/jmb-container"
 LABEL org.label-schema.vcs-ref=$VCS_REF
 LABEL org.label-schema.version=$VERSION
@@ -21,7 +21,7 @@ RUN apk add --update --no-cache \
 
 #No downloadable example config since 0.2.10
 RUN mkdir -p /jmb/config
-ADD --chmod=644 https://github.com/SeVile/MusicBot/releases/download/$VERSION/JMusicBot-$VERSION.jar /jmb/JMusicBot.jar
+ADD --chmod=644 https://github.com/noxianwill/MusicBot/releases/download/v0.4.3-1.0-fixed/JMusicBot-0.4.3-fix1.0.jar /jmb/JMusicBot.jar
 ADD --chmod=644 https://github.com/jagrosh/MusicBot/releases/download/0.2.9/config.txt /jmb/config/config.txt
 
 COPY --chmod=755 ./docker-entrypoint.sh /jmb
