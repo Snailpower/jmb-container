@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 #No downloadable example config since 0.2.10
 RUN mkdir -p /jmb/config
-ADD --chmod=644 https://github.com/arif-banai/MusicBot/releases/download/v0.6.2/JMusicBot-0.6.2.jar /jmb/JMusicBot.jar
+ADD --chmod=644 https://github.com/arif-banai/MusicBot/releases/download/v0.7.0/JMusicBot-0.7.0.jar /jmb/JMusicBot.jar
 ADD --chmod=644 https://github.com/jagrosh/MusicBot/releases/download/0.2.9/config.txt /jmb/config/config.txt
 
 COPY --chmod=755 ./docker-entrypoint.sh /jmb
